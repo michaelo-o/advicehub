@@ -13,8 +13,18 @@ const Advice = () => {
 
     const advice = Advices
 
-    // var singleAdvice =
-    //     console.log(singleAdvice)
+    // Advices.filter((thisAdvice) => {
+    //     if (thisAdvice.id === adviceId) { // Changed this so an advice would match
+    //         return thisAdvice;
+    //     }
+    //     console.log(thisAdvice)
+    // })
+    
+    // var newArray = Advices.filter(function (el) {
+    //     return el.id === adviceId; // Changed this so a peegin would match
+    //   });
+    //   console.log(newArray)
+
     return (
         <>
             <div>
