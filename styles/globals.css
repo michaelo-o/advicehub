@@ -4,6 +4,9 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #0e1217;
+    color: #a8b3cf;
+
 }
 
 a {
@@ -13,4 +16,20 @@ a {
 
 * {
   box-sizing: border-box;
+}
+.blog-preview{
+  background-color: #1c1f26;
+}
+
+.site-title{
+  color: #39e58c;
+}
+.newadvicebutton{
+  color: #39e58c;
+}
+.rightpagenav{
+  color: #39e58c;
+}
+.list-category{
+  color: #39e58c;
 }

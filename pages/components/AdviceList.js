@@ -34,7 +34,7 @@ const Advicelist = () => {
                                 </div>
                             </div>
                             <Link href={"/category/" + advice.category}>
-                            <a><p>•{advice.category}</p></a>                      
+                            <a><p className="list-category">•{advice.category}</p></a>                      
                           </Link>
                             
 
