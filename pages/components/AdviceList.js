@@ -33,18 +33,18 @@ const Advicelist = () => {
                                     <Image src="/bookmark.png" alt="user" width={20} height={20} />
                                 </div>
                             </div>
-
-                            <p>•
-                                {advice.category}
-                            </p>
+                            <Link href={"/category/" + advice.category}>
+                            <a><p>•{advice.category}</p></a>                      
+                          </Link>
+                            
 
                             <div className="titlelist">
-
-                                <h3 className="title">{advice?.title}</h3>
-
+                                <Link href={"/advices/" + advice.id}>
+                                    <a><h3 className="title">{advice?.title}</h3></a>
+                                </Link>
                             </div>
 
-                            <p>Written by {advice.author}</p>
+                            <p>Given By {advice.author}</p>
 
                             <div className="dateandtime">
                                 <p>Given {advice.date} at {advice.time}</p>
@@ -53,6 +53,20 @@ const Advicelist = () => {
                     )
 
                     )}
+                    {
+
+                        <ReactPaginate
+                            previousLabel={'Previous'}
+                            nextLabel={'Next'}
+                            pageCount={pageCount}
+                            onPageChange={changePage}
+                            //this is where the classname for the styles go
+                            containerClassName={"paginationBttns"}
+                            previousLinkClassName={"previousBttn"}
+                            nextLinkClassName={"nextBttn"}
+                            disabledClassName={"paginationDisabled"}
+                            activeClassName={"paginationActive"}
+                        />}
                 </div>
             </div>
 

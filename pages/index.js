@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 import Advices from '../advicedata/Advices.json'
 import { useState, useEffect } from "react";
 import Advicelist from './components/AdviceList'
+import Footer from './components/Footer'
 // import PageNav from './components/pagenav'
 
 
@@ -22,8 +23,6 @@ export default function Home() {
       <div className="grid">
         <Advicelist />
       </div>
-
-
     </div>
   )
 }
