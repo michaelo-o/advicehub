@@ -3,21 +3,24 @@ import { useRouter } from 'next/router'
 import Head from 'next/dist/shared/lib/head'
 
 
-const Category = () => {
-    
+
+
+const Advice = () => {
+
     const router = useRouter()
-    const { category } = router.query
-    const adviceCat = category
+    const { id } = router.query
+    const adviceId = id
 
     const advice = Advices
 
+    // var singleAdvice =
+    //     console.log(singleAdvice)
     return (
         <>
-        <Head>
-            <title>Category - {adviceCat} - Advice Hub Clone</title>
-        </Head>
-            {advice.filter((thisAdvice) => {
-                    if (thisAdvice.category === adviceCat) { // Changed this so an advice would match
+            <div>
+                <h1>A Post {adviceId}</h1>
+                {advice.filter((thisAdvice) => {
+                    if (thisAdvice.id === adviceId) { // Changed this so an advice would match
                         return thisAdvice;
                     }
                 }).map(advice => (
@@ -38,9 +41,9 @@ const Category = () => {
                 )
 
                 )}
-
+            </div>
         </>
     );
 }
 
-export default Category;
+export default Advice;

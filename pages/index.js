@@ -6,7 +6,7 @@ import Advices from '../advicedata/Advices.json'
 import { useState, useEffect } from "react";
 import Advicelist from './components/AdviceList'
 import Footer from './components/Footer'
-// import PageNav from './components/pagenav'
+import PageNav from './components/pagenav'
 
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
         <meta name="description" content="Clone of Advice Hub" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <PageNav /> */}
+      <PageNav />
       <div className="grid">
         <Advicelist />
       </div>

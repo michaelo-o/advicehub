@@ -39,7 +39,7 @@ const Advicelist = () => {
                             
 
                             <div className="titlelist">
-                                <Link href={"/advices/" + advice.id}>
+                                <Link href={"/advice/" + advice.id}>
                                     <a><h3 className="title">{advice?.title}</h3></a>
                                 </Link>
                             </div>
