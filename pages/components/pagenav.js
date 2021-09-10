@@ -22,9 +22,8 @@ const PageNav = () => {
                     </div>
                     <div className="rightpagenav">
                         <form>
-                            <label>Category</label> <br />
                             <select>
-                                <option value="general">genral</option>
+                                <option value="general">Category</option>
                                 <option value="tech">tech</option>
                                 <option value="mobile">tech</option>
                                 <option value="land">tech</option>

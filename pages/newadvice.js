@@ -2,7 +2,9 @@ import { useState } from "react";
 import Head from 'next/head'
 import { useRouter } from "next/dist/client/router";
 import Advices from '../advicedata/Advices.json'
-const Create = () => {
+
+
+const NewAdvice = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('');
@@ -76,4 +78,4 @@ const Create = () => {
 
 }
 
-export default Create;
+export default NewAdvice;

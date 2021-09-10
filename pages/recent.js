@@ -26,54 +26,56 @@ const Recent = () => {
                 <title>Advice Hub - Recent</title>
             </Head>
             <PageNav />
-            <div className="grid">
-                <div className="blog-list">
-                    <div className="blogcont">
-                        {Advices.slice(pagesVisited, pagesVisited + advicesPerPage).map(advice => (
-                            <div className="blog-preview" key={advice.id}>
-                                <div className="picandbookmark">
-                                    <div className="pic">
-                                        O
-                                    </div>
-                                    <div className="bookmark">
-                                        <Image src="/bookmark.png" alt="user" width={20} height={20} />
-                                    </div>
+            <div className="advice-list">
+                <div className="advicecont">
+                    {Advices.slice(pagesVisited, pagesVisited + advicesPerPage).map(advice => (
+                        <div className="advice-preview" key={advice.id}>
+                            <div className="picandbookmark">
+                                <div className="pic">
+                                    O
                                 </div>
-                                <Link href={"/category/" + advice.category}>
-                                    <a><p>•{advice.category}</p></a>
-                                </Link>
-
-
-                                <div className="titlelist">
-                                    <Link href={"/advice/" + advice.id}>
-                                        <a><h3 className="title">{advice?.title}</h3></a>
-                                    </Link>
-                                </div>
-
-                                <p>Given By {advice.author}</p>
-
-                                <div className="dateandtime">
-                                    <p>Given {advice.date} at {advice.time}</p>
+                                <div className="bookmark">
+                                    <button><Image src="/turned_in_not-1.svg" alt="user" width={23} height={23} /></button>
                                 </div>
                             </div>
-                        )
+                            <Link href={"/category/" + advice.category}>
+                                <a><p className="list-category">• {advice.category}</p></a>
+                            </Link>
 
-                        )}
-                        {
 
-                            <ReactPaginate
-                                previousLabel={'Previous'}
-                                nextLabel={'Next'}
-                                pageCount={pageCount}
-                                onPageChange={changePage}
-                                //this is where the classname for the styles go
-                                containerClassName={"paginationBttns"}
-                                previousLinkClassName={"previousBttn"}
-                                nextLinkClassName={"nextBttn"}
-                                disabledClassName={"paginationDisabled"}
-                                activeClassName={"paginationActive"}
-                            />}
-                    </div>
+                            <div className="titlelist">
+                                <Link href={"/advice/" + advice.id}>
+                                    <a><h3 className="title">{advice?.title}</h3></a>
+                                </Link>
+                            </div>
+
+                            <div className="dateandtime">
+                                <p>Given {advice.date} at {advice.time}</p>
+                            </div>
+                            <div className="com-vot-share">
+                                <button><Image src="/arrow_upward-1.svg" alt="user" width={23} height={23} /></button>
+                                <button><Image src="/chat-1.svg" alt="user" width={23} height={23} /></button>
+                                <button><Image src="/share-1.svg" alt="user" width={23} height={23} /></button>
+                                <button><Image src="/arrow_downward-1.svg" alt="user" width={23} height={23} /></button>
+                            </div>
+                        </div>
+                    )
+
+                    )}
+                    {
+
+                        <ReactPaginate
+                            previousLabel={'Previous'}
+                            nextLabel={'Next'}
+                            pageCount={pageCount}
+                            onPageChange={changePage}
+                            //this is where the classname for the styles go
+                            containerClassName={"paginationBttns"}
+                            previousLinkClassName={"previousBttn"}
+                            nextLinkClassName={"nextBttn"}
+                            disabledClassName={"paginationDisabled"}
+                            activeClassName={"paginationActive"}
+                        />}
                 </div>
             </div>
         </>

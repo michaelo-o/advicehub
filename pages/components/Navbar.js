@@ -12,11 +12,16 @@ const Navbar = () => {
     return (
         <>
             <nav className="navbar">
-                <Link href="/"><a><h2 className="site-title">Advice Blog (Currently in the works)</h2></a></Link>
-                <div className="links">
-                    <Link href="/newblog" >
+                <div className="sitename">
+                    <Link href="/"><a><h1 className="site-title">AdviceHub</h1></a></Link>
+                </div>
+                <div className="newADV">
+                    <Link href="/newadvice" >
                         <a><h3 className="newadvicebutton">+ New Advice</h3></a>
                     </Link>
+                </div>
+                <div className="lightdark">
+                    <Image src="/nightlight_round.png" alt="user" width={23} height={23} />
                 </div>
             </nav>
         </>

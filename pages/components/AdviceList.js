@@ -14,29 +14,28 @@ const Advicelist = () => {
 
     const pageCount = Math.ceil(Advices.length / advicesPerPage)
 
-    // const pageCount = 5
     const changePage = ({ selected }) => { //selected is a ReactPaginate object-it is the number for the page we want to move to
         { setpageNumber(selected) };
     }
 
     return (
         <>
-            <div className="blog-list">
-                <div className="blogcont">
+            <div className="advice-list">
+                <div className="advicecont">
                     {Advices.slice(pagesVisited, pagesVisited + advicesPerPage).map(advice => (
-                        <div className="blog-preview" key={advice.id}>
+                        <div className="advice-preview" key={advice.id}>
                             <div className="picandbookmark">
                                 <div className="pic">
                                     O
                                 </div>
                                 <div className="bookmark">
-                                    <Image src="/bookmark.png" alt="user" width={20} height={20} />
+                                    <button><Image src="/turned_in_not-1.svg" alt="user" width={23} height={23} /></button>
                                 </div>
                             </div>
                             <Link href={"/category/" + advice.category}>
-                            <a><p className="list-category">•{advice.category}</p></a>                      
-                          </Link>
-                            
+                                <a><p className="list-category">• {advice.category}</p></a>
+                            </Link>
+
 
                             <div className="titlelist">
                                 <Link href={"/advice/" + advice.id}>
@@ -44,10 +43,14 @@ const Advicelist = () => {
                                 </Link>
                             </div>
 
-                            <p>Given By {advice.author}</p>
-
                             <div className="dateandtime">
                                 <p>Given {advice.date} at {advice.time}</p>
+                            </div>
+                            <div className="com-vot-share">
+                                <button><Image src="/arrow_upward-1.svg" alt="user" width={23} height={23} /></button>
+                                <button><Image src="/chat-1.svg" alt="user" width={23} height={23} /></button>
+                                <button><Image src="/share-1.svg" alt="user" width={23} height={23} /></button>
+                                <button><Image src="/arrow_downward-1.svg" alt="user" width={23} height={23} /></button>
                             </div>
                         </div>
                     )
