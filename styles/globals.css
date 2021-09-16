@@ -51,6 +51,8 @@ a {
   padding: 0;
   align-items: baseline;
 }
+
+
 /* Pagenav */
 .pagenav{
   display: flex;
@@ -59,7 +61,6 @@ a {
   margin: 0;
   width: 100%;
   justify-content: space-between;
-
 }
 .leftpagenav{
   display: flex;
@@ -67,7 +68,6 @@ a {
   margin: 0;
   padding-top: 10px;
   align-items: center;
-
 }
 .leftpagenav h3{
   padding: 5px 16px;
@@ -94,6 +94,8 @@ a {
   border: none;
   box-sizing: border-box;
 }
+
+
 /* Footer */
 .footer{
   display: flex;
@@ -106,8 +108,9 @@ a {
 .footer a {
   color: #39e58c;
 }
-/* Pagination */
 
+
+/* Pagination */
 .paginationBttns {
   width: 90%;
   list-style: none;
@@ -146,19 +149,20 @@ a {
 
 /* AdviceList */
 .advice-list{
-  padding: 1.5% 4%;
+  padding: 1.5% 2%;
 }
 
 .advicecont{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   padding: 0%;
   margin: 0%;
 }
 .advice-preview{
   background-color: #1c1f26;
+  margin-right: 20px;
   width: 350px;
   justify-content: stretch;
   margin-bottom: 30px;
@@ -178,7 +182,6 @@ a {
   border: none;
   outline: none;
 }
-
 .com-vot-share{
   display: flex;
   flex-direction: row;
@@ -197,4 +200,71 @@ a {
 }
 .list-category{
   color: #39e58c;
+}
+
+
+/* add new advice form */
+
+.newadvice {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: #0e1217;
+  padding: 5px 25px 10px 25px;
+  border: 5px solid black;
+  margin-bottom: 20px;
+}
+.newadvice label {
+  text-align: left;
+  display: block;
+}
+.newadvice h2 {
+  /* font-size: 20px; */
+  color: #39e58c;
+  margin-bottom: 0px;
+}
+.newadvice input, .newadvice select {
+  width: 100%;
+  padding: 15px 15px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+  outline: none;
+  font-weight: bolder;
+  font-size: larger;
+}
+.newadvice select{
+  font-weight: bold;
+  font-size: large;
+}
+.advdesc textarea {
+  width: 100%;
+  padding: 15px 15px 100px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+  outline: none;
+  font-weight: bolder; 
+  font-size: larger;
+  font-family: bahnschrift;
+}
+.newadvice button {
+  text-align: center;
+  width: 100%;
+  background: #1c1f26;
+  color: #fff;
+  border: 0;
+  padding: 15px;
+  cursor: pointer;
+  margin: 10px 0 50px 0;
+}
+.yellow{
+  color: yellow;
+}
+.buttoncenter{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

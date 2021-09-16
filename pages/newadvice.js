@@ -17,9 +17,9 @@ const NewAdvice = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         const newAdvice = { title, body, author, category, id };
-    
+
         Advices.unshift(newAdvice)
-            router.push('/')        
+        router.push('/')
     }
 
     return (
@@ -31,44 +31,56 @@ const NewAdvice = () => {
             <div className="modalback">
                 <div className="newadvice">
                     <h2>Create an Advice Card</h2>
-                    <p>Share a short experience or tips with others.</p>
+                    <p className="yellow">Share a short experience or tips with others.</p>
                     <form onSubmit={handleSubmit}>
+                        {/* Form actually statts here */}
+                        <label>Select a Category:</label>
+                        <select
+                            value={category}
+                            onChange={(event) => setCategory(event.target.value)}
+                        >
+                            <option value="general">Choose</option>
+                            <option value="tech">tech</option>
+                            <option value="tech">tech</option>
+                            <option value="tech">tech</option>
+                            <option value="tech">tech</option>
+                            <option value="tech">tech</option>
+                            <option value="tech">tech</option>
+                        </select>
+
                         <label>Give A Short Advice</label>
                         <input
                             type="text"
                             required
                             value={title}
                             onChange={(event) => setTitle(event.target.value)}
+                            placeholder="Advice Title"
                         />
-                        <label>Advice Description:</label>
-                        <textarea
-                            required
-                            value={body}
-                            onChange={(event) => setBody(event.target.value)}
-                        ></textarea>
-                        <label>Advice Author:</label>
+
+                        <div className="advdesc">
+                            <label>Description (optional)</label>
+                            <textarea
+                                type="text"
+                                required
+                                value={body}
+                                onChange={(event) => setBody(event.target.value)}
+                                placeholder="Give a Description about the advice"
+                            />
+                        </div>
+
+                        {/* <label>Advice Author:</label>
                         <input
                             type="text"
                             required
                             value={author}
                             onChange={(event) => setAuthor(event.target.value)}
-                        />
+                        /> */}
 
-                        <label>Advice Category:</label>
-                        <select
-                            value={category}
-                            onChange={(event) => setCategory(event.target.value)}
-                        >
-                            <option value="general">general</option>
-                            <option value="tech">tech</option>
-                        </select>
-                        <input
-                            type="number"
-                            required
-                            value={id}
-                            onChange={(event) => setid(event.target.value)}
-                        />
-                        <button>Add Advice</button>
+                        <div className="buttoncenter">
+                            <button>ADD ADVICE</button>
+                        </div>
+
+
                     </form>
                 </div>
             </div>

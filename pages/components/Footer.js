@@ -1,11 +1,13 @@
 import Link from "next/link";
+import Image from "next/dist/client/image";
+
 const Footer = () => {
     return (
         <div className="footer">
             <div className="backtotop">
                 <Link href="/">
                     <a>
-                        <p>Back To Home/Top</p>
+                        <p>Back To Home/Top <Image src="/backtotop-greyish.png" width={20} height={20} /></p>
                     </a>
                 </Link>
             </div>
